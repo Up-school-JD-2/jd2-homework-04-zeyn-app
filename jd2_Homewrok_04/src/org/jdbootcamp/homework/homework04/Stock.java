@@ -2,8 +2,6 @@ package org.jdbootcamp.homework.homework04;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jdbootcamp.homework.homework04.Album;
-
 public class Stock {
 	private List<Album> albums = new ArrayList<>(); 
 	private List<Song> songs = new ArrayList<>();
@@ -24,5 +22,4 @@ public class Stock {
 	public void setSongs(Song song) {
 		songs.add(song);
 	}
-	
 }

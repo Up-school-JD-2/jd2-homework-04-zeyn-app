@@ -1,6 +1,6 @@
 package org.jdbootcamp.homework.homework04;
+
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Album {
@@ -12,7 +12,6 @@ public class Album {
 	private double price;
 
 	public Album() {
-
 	}
 
 	public Album(String name, Artist artist, String publishedYear, double price) {
@@ -57,21 +56,23 @@ public class Album {
 	}
 
 	public void add(Song song) {
-			songs.add(song);
+		songs.add(song);
 	}
 
 	public void listSongs() {
 		int index = 0;
-		
+
 		System.out.println("The songs of \"" + name + "\"");
-		
+
 		for (Song song : songs) {
 			System.out.println(++index + ". " + song.getName());
 		}
 	}
-	
-	public void printInfo() {
-		System.out.println(name + "\t" + "Sanatçı: " + artist.getName() + "\tprice: " + price);
-	}
 
+	public void printInfo() {
+		System.out.println("**********************");
+		System.out.println("Name: " + name + " " + "\nArtist: " + artist.getName() + "\nPublished Year: "
+				+ publishedYear + "\nprice: " + price);
+		System.out.println("**********************");
+	}
 }

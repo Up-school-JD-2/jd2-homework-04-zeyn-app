@@ -1,25 +1,19 @@
 package org.jdbootcamp.homework.homework04;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class UserManager {
 
-	private List<User> users = new ArrayList();
+	private List<User> users = new ArrayList<User>();
 
-	public UserManager() {
-
-	}
-
-	public UserManager(User user) {
-		// this.user = user;
-	}
+	public UserManager() {}
 
 	public void addNewUser(User user) {
 		Scanner scanner = new Scanner(System.in);
 
-		if(user.getName()==null) {
+		if (user.getName() == null) {
 			System.out.print("Adınız: ");
 			user.setName(scanner.nextLine());
 
@@ -29,7 +23,7 @@ public class UserManager {
 			System.out.print("Şifre: ");
 			user.setPassword(scanner.nextLine());
 		}
-
+		scanner.close();
 		users.add(user);
 	}
 

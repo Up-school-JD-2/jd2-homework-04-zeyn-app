@@ -1,7 +1,4 @@
 package org.jdbootcamp.homework.homework04;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -62,12 +59,12 @@ public class Main {
 					String subChoice = scanner.next();
 					switch (subChoice) {
 					case "1":
-						INNERLOOP3: while (true) {
+						while (true) {
 							System.out.println("Kategori Seçiniz: \nAlbüm\nŞarkı");
 							String category = scanner.next();
 
 							if (category.charAt(0) == 'A' || category.charAt(0) == 'a') {
-								System.out.println("Aramak İstediğiniz Ürün: ");
+								System.out.print("Aramak İstediğiniz Ürün: ");
 								String product = scanner.next();
 
 								for (Album album : stock.getAlbums()) {
@@ -137,11 +134,10 @@ public class Main {
 						break;
 					}
 				}
+				
 				break;
-
 			case "3":
 				break OUTERLOOP;
-
 			}
 		}
 	}

@@ -1,8 +1,7 @@
 package org.jdbootcamp.homework.homework04;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import org.jdbootcamp.homework.homework04.Album;
 
 public class Cart {
 	private User user;
@@ -11,7 +10,6 @@ public class Cart {
 	private List<Album> albums = new ArrayList<>();
 
 	public Cart() {
-
 	}
 
 	public Cart(User user) {
@@ -48,15 +46,13 @@ public class Cart {
 	public void listItems() {
 		int index = 0;
 		if (!albums.isEmpty()) {
-			// System.out.println("...Albümler...");
 			for (Album album : albums) {
-				System.out.println(++index + ". " + album.getName());
+				System.out.println(++index + ". " + album.getName() + " " + album.getPrice());
 			}
 		}
 		if (!songs.isEmpty()) {
-			// System.out.println("...Şarkılar...");
 			for (Song song : songs) {
-				System.out.println(++index + ". " + song.getName());
+				System.out.println(++index + ". " + song.getName() + " " + song.getPrice());
 			}
 		}
 

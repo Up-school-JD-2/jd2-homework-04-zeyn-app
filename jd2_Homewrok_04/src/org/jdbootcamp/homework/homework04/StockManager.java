@@ -4,9 +4,8 @@ public class StockManager {
 	private Stock stock = new Stock();
 
 	public StockManager() {
-		
 	}
-	
+
 	public StockManager(Stock stock) {
 		this.stock = stock;
 	}
@@ -25,7 +24,7 @@ public class StockManager {
 		if (!stock.getAlbums().isEmpty()) {
 			System.out.println("\n...Albümler...\n");
 			for (Album album : stock.getAlbums()) {
-				System.out.println(++index + ". " + album.getName());
+				System.out.println(++index + ". " + album.getName() + " " + album.getPrice());
 			}
 		}
 
@@ -33,7 +32,7 @@ public class StockManager {
 		if (!stock.getSongs().isEmpty()) {
 			System.out.println("\n...Şarkılar...\n");
 			for (Song song : stock.getSongs()) {
-				System.out.println(++index + ". " + song.getName());
+				System.out.println(++index + ". " + song.getName() + " " + song.getPrice());
 			}
 		}
 	}
