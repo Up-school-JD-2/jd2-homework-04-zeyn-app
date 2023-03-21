@@ -70,7 +70,7 @@ public class Album {
 	}
 
 	public void printInfo() {
-		System.out.println("**********************");
+		System.out.println("\n**********************");
 		System.out.println("Name: " + name + " " + "\nArtist: " + artist.getName() + "\nPublished Year: "
 				+ publishedYear + "\nprice: " + price);
 		System.out.println("**********************");

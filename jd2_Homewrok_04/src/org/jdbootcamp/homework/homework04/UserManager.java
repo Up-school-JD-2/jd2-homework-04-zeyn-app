@@ -11,9 +11,9 @@ public class UserManager {
 	public UserManager() {}
 
 	public void addNewUser(User user) {
-		Scanner scanner = new Scanner(System.in);
-
+		
 		if (user.getName() == null) {
+			Scanner scanner = new Scanner(System.in);
 			System.out.print("Adınız: ");
 			user.setName(scanner.nextLine());
 
@@ -22,8 +22,8 @@ public class UserManager {
 
 			System.out.print("Şifre: ");
 			user.setPassword(scanner.nextLine());
+			
 		}
-		scanner.close();
 		users.add(user);
 	}
 

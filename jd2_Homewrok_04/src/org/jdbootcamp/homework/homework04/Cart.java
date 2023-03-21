@@ -59,4 +59,20 @@ public class Cart {
 		System.out.println("Toplam tutar: " + totalPrice);
 	}
 
+	/*
+	public void RemoveItem(int i) {
+		if(i<0) return;
+		
+		if(albums.size()<i) albums.remove(i);
+		else songs.remove(i);
+		
+	}
+
+	public void RemoveAll() {
+		songs = null;
+		albums = null;
+		
+	}
+	*/
+
 }

@@ -63,7 +63,7 @@ public class Song {
 	}
 
 	public void printInfo() {
-		System.out.println("**********************");
+		System.out.println("\n**********************");
 		System.out.println("Name: " + name + " " + "\nArtist: " + artist.getName() + "\nSize: " + size + "\nAlbum: "
 				+ album.getName() + "\nPrice: " + price);
 		System.out.println("**********************");
