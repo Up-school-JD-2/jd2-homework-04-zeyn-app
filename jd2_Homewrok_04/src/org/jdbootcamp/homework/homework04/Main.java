@@ -15,7 +15,7 @@ public class Main {
 
 		Cart cart = new Cart();
 		User user = new User("Zeynep", "Özdemir", cart);
-		userManagement.addNewUser(user);
+		userManagement.add(user);
 
 		System.out.println("***** HOŞGELDİNİZ *****\n");
 
@@ -32,13 +32,13 @@ public class Main {
 					String subChoice = scanner.next();
 					switch (subChoice) {
 					case "1":
-						System.out.println("Kullanıcı bilgilerinizi giriniz: ");
+						//System.out.println("\tKullanıcı bilgilerinizi giriniz: ");
 						User newUser = new User();
-						userManagement.addNewUser(newUser);
+						userManagement.add(newUser);
 						break;
 
 					case "2":
-						System.out.println("Kullanıcılar listeleniyor...");
+						//System.out.println("Kullanıcılar listeleniyor...");
 						userManagement.getUser();
 						break;
 
@@ -61,11 +61,11 @@ public class Main {
 					switch (subChoice) {
 					case "1":
 						while (true) {
-							System.out.println("Kategori Seçiniz: \nAlbüm\nŞarkı");
+							System.out.println("\nKategori Seçiniz: \nAlbüm\nŞarkı");
 							String category = scanner.next();
 
 							if (category.charAt(0) == 'A' || category.charAt(0) == 'a') {
-								System.out.print("Aramak İstediğiniz Ürün: ");
+								System.out.print("\tAramak İstediğiniz Ürün: ");
 								String product = scanner.next();
 
 								for (Album album : stock.getAlbums()) {
@@ -74,7 +74,7 @@ public class Main {
 									if (albm.contains(product)) {
 										album.printInfo();
 
-										System.out.println("1-Sepete Ekle\t\t\t2-Geri");
+										System.out.println("\t1-Sepete Ekle\t\t2-Geri");
 										String lastChoice = scanner.next();
 										if (lastChoice.equals("1")) {
 											cart.add(album);
@@ -90,7 +90,7 @@ public class Main {
 							}
 
 							else if (category.charAt(0) == 'S' || category.charAt(0) == 's' || category.charAt(0) == 'Ş' || category.charAt(0) == 'ş') {
-								System.out.println("Aramak İstediğiniz Ürün: ");
+								System.out.print("\tAramak İstediğiniz Ürün: ");
 								String product = scanner.next();
 				
 								product.toLowerCase();
@@ -99,7 +99,7 @@ public class Main {
 									if (sng.contains(product)) {
 										song.printInfo();
 
-										System.out.println("1-Sepete Ekle\t\t\t2-Geri");
+										System.out.println("\t1-Sepete Ekle\t\t2-Geri");
 										String lastChoice = scanner.next();
 										if (lastChoice.equals("1")) {
 											cart.add(song);
@@ -161,6 +161,7 @@ public class Main {
 
 				break;
 			case "3":
+				System.out.println("\n**** İyi Günler Dileriz ****");
 				break OUTERLOOP;
 			}
 		}

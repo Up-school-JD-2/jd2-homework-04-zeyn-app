@@ -45,18 +45,20 @@ public class Cart {
 
 	public void listItems() {
 		int index = 0;
+		System.out.println("\n\t=============== SEPETİM ===============\n");
 		if (!albums.isEmpty()) {
 			for (Album album : albums) {
-				System.out.println(++index + ". " + album.getName() + " " + album.getPrice());
+				System.out.println("\t" + ++index + ". " + album.getName());
 			}
 		}
 		if (!songs.isEmpty()) {
 			for (Song song : songs) {
-				System.out.println(++index + ". " + song.getName() + " " + song.getPrice());
+				System.out.println("\t" + ++index + ". " + song.getName());
 			}
 		}
 
-		System.out.println("Toplam tutar: " + totalPrice);
+		System.out.println("\n\tToplam tutar: " + totalPrice);
+		System.out.println("\t=======================================");
 	}
 
 	/*

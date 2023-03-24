@@ -70,9 +70,9 @@ public class Album {
 	}
 
 	public void printInfo() {
-		System.out.println("\n**********************");
-		System.out.println("Name: " + name + " " + "\nArtist: " + artist.getName() + "\nPublished Year: "
-				+ publishedYear + "\nprice: " + price);
-		System.out.println("**********************");
+		System.out.println("\n\t**********************");
+		System.out.println("\tName: " + name + " " + "\n\tArtist: " + artist.getName() + "\n\tPublished Year: "
+				+ publishedYear + "\n\tprice: " + price);
+		System.out.println("\t**********************\n");
 	}
 }

@@ -20,21 +20,24 @@ public class StockManager {
 
 	public void listStock() {
 
+		System.out.println("\n\t=======================================");
+
 		int index = 0;
 		if (!stock.getAlbums().isEmpty()) {
-			System.out.println("\n...Albümler...\n");
+			System.out.println("\t...Albümler...\n");
 			for (Album album : stock.getAlbums()) {
-				System.out.println(++index + ". " + album.getName() + " " + album.getPrice());
+				System.out.println("\t" + ++index + ". " + album.getName());
 			}
 		}
 
 		index = 0;
 		if (!stock.getSongs().isEmpty()) {
-			System.out.println("\n...Şarkılar...\n");
+			System.out.println("\n\t...Şarkılar...\n");
 			for (Song song : stock.getSongs()) {
-				System.out.println(++index + ". " + song.getName() + " " + song.getPrice());
+				System.out.println("\t" + ++index + ". " + song.getName());
 			}
 		}
+		System.out.println("\t=======================================");
 	}
 
 	public void allItems() {
